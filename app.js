@@ -10,7 +10,7 @@ function asyncMapC(arr, fun) {
       .then(() => fun(val, i, arr))
       .then(result => newArr.push(result));
   })
-  return promise.then(() => Promise.resolve(newArr))
+  return promise.then(() => newArr)
 }
 
 let arr = [1, 2, 3, 7, 'Vasya', 66, 454, 2];
